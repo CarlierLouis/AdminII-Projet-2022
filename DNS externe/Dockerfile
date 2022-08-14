@@ -5,13 +5,13 @@ FROM ubuntu:latest
 RUN apt update && apt upgrade -y && apt install bind9 bind9utils dnsutils net-tools -y
 
 #Copie des fichiers à implémenter dans le container docker "dnsext".
-COPY named.conf /etc/bind/
+COPY named.conf /etc/bind
 
-COPY mes-b3.ephec-ti.be /etc/bind/zones/
+COPY mes-b3.ephec-ti.be /etc/bind
 
 #Exposition des ports 53 tcp et udp de l'image
 EXPOSE 53/udp
 EXPOSE 53/tcp
 
 #Commande réalisé au démarage du conteneur
-CMD ["named", "-g"]
+CMD ["named","-g"]

@@ -1,5 +1,5 @@
-$ ORIGIN mes-b3.ephec-ti.be.
-$ $TTL 604800
+;$ ORIGIN mes-b3.ephec-ti.be.
+$TTL 604800
 @       IN      SOA     ns.mes-b3.ephec-ti.be. root.mes-b3.ephec-ti.be. (
                         1           ; Serial
                         604800      ; Refresh
