@@ -5,6 +5,7 @@ RUN apt update -y && apt upgrade -y
 RUN apt install -y dnsutils net-tools iputils-ping
 RUN apt install -y curl 
 RUN apt install vim -y
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
 
 # Copie des fichiers à implémenter dans le container docker "web".
