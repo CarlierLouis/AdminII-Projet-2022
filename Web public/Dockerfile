@@ -13,3 +13,10 @@ COPY index.html /var/www/html/index.html
 COPY index.php /var/www/b2b/index.php
 COPY www.conf /etc/apache2/sites-available/www.conf
 COPY b2b.conf /etc/apache2/sites-available/b2b.conf
+
+# SSL
+COPY cert.pem /etc/ssl/certs/cert.pem
+COPY cert-key.pem /etc/ssl/certs/cert-key.pem
+
+RUN a2enmod ssl
+RUN service apache2 start
