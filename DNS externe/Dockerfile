@@ -4,7 +4,7 @@ FROM ubuntu:latest
 #Installation de bind9 et d'outils nécessaires pour le débugging
 RUN apt update && apt upgrade -y && apt install bind9 bind9utils dnsutils net-tools -y
 
-#Copie des fichiers à implémenter dans le container docker "dnsext".
+#Copie des fichiers à implémenter
 COPY named.conf /etc/bind
 
 COPY mes-b3.ephec-ti.be /etc/bind
