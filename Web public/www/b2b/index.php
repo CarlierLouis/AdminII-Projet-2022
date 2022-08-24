@@ -3,7 +3,7 @@
 
 <?php
     # Connexion à la base de données
-    $db= mysqli_connect('37.187.225.241:3306','admin','Password123#@!','wt_db') or die('Erreur de connection!');
+    $db= mysqli_connect('<IP_ADDRESS>','<USER>','<PASSWORD>','<DB_NAME>') or die('Erreur de connection!');
 ?>
 
 <html>
